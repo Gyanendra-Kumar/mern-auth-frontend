@@ -1,0 +1,72 @@
+@import url("https://fonts.googleapis.com/css2?family=Reddit+Mono:wght@200..900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Reddit Mono", monospace;
+  scroll-behavior: smooth;
+}
+
+@layer base {
+  body {
+    @apply bg-gray-100;
+  }
+}
+
+@layer utilities {
+  .normal-padding {
+    @apply py-1 px-2;
+  }
+  .btn {
+    @apply py-1 px-2 rounded-md;
+  }
+  .gradientColor {
+    @apply bg-gradient-to-r hover:bg-gradient-to-l from-indigo-500 via-purple-500 to-pink-500 text-white;
+  }
+  .container {
+    @apply max-w-4xl mx-auto;
+  }
+  .auth-class {
+    @apply py-2 px-4 rounded-sm text-white text-sm hover:shadow-lg transition-all duration-300 ease-in-out text-center;
+  }
+
+  .input {
+    @apply bg-gray-100 text-sm border-b border-gray-300 focus:outline-none rounded-tl-sm rounded-tr-sm py-2 px-4 text-gray-500 disabled:bg-gray-200;
+  }
+  .error-input {
+    @apply flex w-full bg-gray-100 items-center border-2 border-errorRed py-2 px-3;
+  }
+  .accountCheck {
+    @apply flex gap-1 text-sm justify-center text-gray-500;
+  }
+  .centerAll {
+    @apply flex justify-center items-center min-h-[80vh];
+  }
+  .inputColor {
+    @apply border w-full py-1 px-2 rounded-md border-gray-400 flex items-center bg-transparent;
+  }
+}
+
+/* CUSTOM TAILWIND CSS STYLING */
+/* @layer base {
+ body {
+    @apply bg-gray-100;
+ }
+}
+
+@layer components {
+ .btn-blue {
+    @apply bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded;
+ }
+}
+
+@layer utilities {
+ .text-lg-bold {
+    @apply text-lg font-bold;
+ }
+} */
